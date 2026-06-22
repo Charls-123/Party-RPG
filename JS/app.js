@@ -1,9 +1,12 @@
+import {Notificacion} from './notificacion.js'
+import {} from './personaje.js'
+
 const nombreInput = document.querySelector('#nombre');
 const nivelInput = document.querySelector('#nivel');
 const magiaInput = document.querySelector('#magia');
 const categoriaInput = document.querySelector('#categoria');
 
-const formulario = document.querySelector('#formulario-personaje');
+export const formulario = document.querySelector('#formulario-personaje');
 
 const personajeObj = {
     nombre: '',

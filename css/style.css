@@ -104,3 +104,16 @@ input , select{
     gap: 2rem;
 }
 
+/* Errores */
+
+.alerta {
+    color: #ffffff;
+    height: 50px;
+    width: 150px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.error {background-color: red;}
+.exito {background-color: green;}
+
