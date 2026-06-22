@@ -23,8 +23,10 @@ categoriaInput.addEventListener('change', datosRegistro);
 
 formulario.addEventListener('submit', btnSubmit);
 
-//Functions
+//Instancias
+const notificacion = new Notificacion({});
 
+//Functions
 function datosRegistro (e) {
     personajeObj[e.target.name] = e.target.value;
     console.log(personajeObj);
@@ -33,5 +35,16 @@ function datosRegistro (e) {
 function btnSubmit(e) {
     e.preventDefault();
 
-    console.log(personajeObj);
+    if (Object.values(personajeObj).some(valor => valor.trim() === '')) {
+        notificacion({
+            mensaje : 'Llena todos los campos',
+            tipo : 'error'
+        });
+
+        console.log(notificacion)
+
+        return;
+    } else {
+        console.log('personaje creados')
+    }
 }

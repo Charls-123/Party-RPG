@@ -1,9 +1,10 @@
 import {formulario} from './app.js';
 
 export class Notificacion {
-    constructor (mensaje, tipo) {
+    constructor ({mensaje, tipo}) {
         this.mensaje = mensaje;
         this.tipo = tipo;
+        this.mostrar();
     }
 
     mostrar() {
@@ -20,7 +21,7 @@ export class Notificacion {
         formulario.parentElement.insertBefore(alerta);
 
         setTimeout(() => {
-            formulario.remove();
+            alerta.remove();
         }, 3000)
 
 
