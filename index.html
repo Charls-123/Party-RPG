@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ingresa Personajes</h1>
+    </header>
+
+    <main>
+        <section class="contenedor-formulario contenedor">
+            <form action="" id="formulario-personaje">
+                <div class="campo">
+                    <label for="nombre">Nombre de Personaje</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Sydan">
+                </div>
+
+                <div class="campo">
+                    <label for="nivel">Nivel de Personaje</label>
+                    <input type="number" id="nivel" name="nivel" placeholder="Ej. 23">
+                </div>
+
+                <div class="campo">
+                    <label for="magia">Porcentaje Magico</label>
+                    <input type="text" id="magia" name="magia" placeholder="Ej. 360">
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Tipo de Personaje</label>
+                    <select id="categoria" name="categoria">
+                        <option value="" disabled selected>-- Selecciona un estado --</option>
+                        <option value="Hechicero">Sabio</option>
+                        <option value="Gerrero">Guerrero</option>
+                        <option value="Santo">Santo</option>
+                        <option value="Ladron">Ladronr</option>
+                        <option value="Invocador">Invocador</option>
+                        <option value="Sabio">Sabio</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <div class="contenedor-personajes contenedor">
+
+            </div>
+
+            <div class="contenedor-party contenedor">
+
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/app.js"></script>
+    
+</body>
+</html>

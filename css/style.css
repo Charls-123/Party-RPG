@@ -1,0 +1,62 @@
+
+/* Fondos pagina */
+
+body {
+    background: linear-gradient(to bottom, #717172 50%, #353537 100%);
+
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fondo de contenedores */
+
+.contenedor {
+    /* Dimensiones y espaciado */
+    width: 250px;
+    padding: 1.5rem;
+    border-radius: 6px; /* Ligero redondeo clásico */
+
+    /* El color de fondo: Un degradado azul de arriba hacia abajo */
+    background: linear-gradient(to bottom, #717172 40%, #353537 100%);
+
+    /* 1. Borde principal gris claro / blanco sucio */
+    border: 4px solid #d4d4d4;
+
+    /* 2. Borde exterior negro intenso (no ocupa espacio en el layout) */
+    outline: 2px solid #000000;
+
+    /* 3. Sombra interna para dibujar la línea negra entre el borde gris y el fondo azul */
+    box-shadow: inset 0 0 0 2px #000000;
+
+    /* Estilos de texto */
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* configuraciones del formulario */
+.contenedor-formulario {
+    margin-bottom: 4rem;
+}
+
+.campo {
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: .4rem 1.7rem;
+    margin-top: .5rem;
+    border-radius: 6px;
+}
