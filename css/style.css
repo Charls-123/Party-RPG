@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+h1,h2, p {
+    color: #ffffff;
+}
+
 header {
     text-align: center;
 }
@@ -18,8 +22,8 @@ main {
     align-items: center;
 }
 
-/* Fondo de contenedores */
 
+/* Fondo de contenedores */
 .contenedor {
     /* Dimensiones y espaciado */
     width: 250px;
@@ -53,10 +57,39 @@ main {
 
 .campo {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-input {
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+input , select{
     padding: .4rem 1.7rem;
     margin-top: .5rem;
     border-radius: 6px;
 }
+
+.btn-submit {
+    color: #3c3a3a;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto;
+}
+
+.btn-submit:hover {
+    background-color: #b5b4b4;
+}
+
+/* Contendor de los datos de los personajes */
+
+.contenedor-datos {
+    display: flex;
+    flex-direction: column;
+}
+
