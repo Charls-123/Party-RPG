@@ -23,9 +23,6 @@ categoriaInput.addEventListener('change', datosRegistro);
 
 formulario.addEventListener('submit', btnSubmit);
 
-//Instancias
-const notificacion = new Notificacion({});
-
 //Functions
 function datosRegistro (e) {
     personajeObj[e.target.name] = e.target.value;
@@ -36,7 +33,7 @@ function btnSubmit(e) {
     e.preventDefault();
 
     if (Object.values(personajeObj).some(valor => valor.trim() === '')) {
-        notificacion({
+        const notificacion = new Notificacion({
             mensaje : 'Llena todos los campos',
             tipo : 'error'
         });
@@ -45,6 +42,21 @@ function btnSubmit(e) {
 
         return;
     } else {
-        console.log('personaje creados')
+        new Notificacion({
+            mensaje : 'Personaje Creado',
+            tipo : 'exito'
+        })
     }
+
+    formulario.reset();
+    reiniciarObjeto();
+}
+
+function reiniciarObjeto() {
+    Object.assign(personajeObj, {
+        nombre: '',
+        nivel: '',
+        magia: '',
+        categoria: ''
+    })
 }

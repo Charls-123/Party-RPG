@@ -8,21 +8,21 @@ export class Notificacion {
     }
 
     mostrar() {
-        const alerta = createElement('div');
-        alerta.classlist.add('alerta');
+        const alerta = document.createElement('DIV');
+        alerta.classList.add('alerta');
 
-        const alertaPrevia = document.querySelector('alerta');
+        const alertaPrevia = document.querySelector('.alerta');
         alertaPrevia?.remove();
 
-        this.tipo === 'error' ? alerta.classlist.add('error') : alerta.classlist.add('exito');
+        this.tipo === 'error' ? alerta.classList.add('error') : alerta.classList.add('exito');
 
         alerta.textContent = this.mensaje;
 
-        formulario.parentElement.insertBefore(alerta);
+        formulario.parentElement.insertBefore(alerta, formulario);
 
         setTimeout(() => {
             alerta.remove();
-        }, 3000)
+        }, 3000);
 
 
     }   

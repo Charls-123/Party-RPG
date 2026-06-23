@@ -108,8 +108,6 @@ input , select{
 
 .alerta {
     color: #ffffff;
-    height: 50px;
-    width: 150px;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
 }
