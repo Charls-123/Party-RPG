@@ -1,5 +1,5 @@
 import {Notificacion} from './notificacion.js'
-import {adminPersonajes} from './personaje.js'
+import {AdminPersonajes} from './personaje.js'
 
 const nombreInput = document.querySelector('#nombre');
 const nivelInput = document.querySelector('#nivel');
@@ -7,6 +7,7 @@ const magiaInput = document.querySelector('#magia');
 const categoriaInput = document.querySelector('#categoria');
 
 export const formulario = document.querySelector('#formulario-personaje');
+export const contPersonajes = document.querySelector('#personajes');
 
 export const personajeObj = {
     nombre: '',
@@ -23,10 +24,14 @@ categoriaInput.addEventListener('change', datosRegistro);
 
 formulario.addEventListener('submit', btnSubmit);
 
+//Inicializacion de clases
+const personajes = new AdminPersonajes();
+
+
 //Functions
 function datosRegistro (e) {
     personajeObj[e.target.name] = e.target.value;
-    console.log(personajeObj);
+
 }
 
 function btnSubmit(e) {
@@ -40,10 +45,13 @@ function btnSubmit(e) {
 
         return;
     } else {
+
         new Notificacion({
             mensaje : 'Personaje Creado',
             tipo : 'exito'
         })
+        
+        personajes.agregar({...personajeObj});
     }
 
     formulario.reset();
