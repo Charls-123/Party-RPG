@@ -1,5 +1,5 @@
 import {Notificacion} from './notificacion.js'
-import {} from './personaje.js'
+import {adminPersonajes} from './personaje.js'
 
 const nombreInput = document.querySelector('#nombre');
 const nivelInput = document.querySelector('#nivel');
@@ -8,7 +8,7 @@ const categoriaInput = document.querySelector('#categoria');
 
 export const formulario = document.querySelector('#formulario-personaje');
 
-const personajeObj = {
+export const personajeObj = {
     nombre: '',
     nivel: '',
     magia: '',
@@ -37,8 +37,6 @@ function btnSubmit(e) {
             mensaje : 'Llena todos los campos',
             tipo : 'error'
         });
-
-        console.log(notificacion)
 
         return;
     } else {
