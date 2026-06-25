@@ -10,10 +10,11 @@ export const formulario = document.querySelector('#formulario-personaje');
 export const contPersonajes = document.querySelector('#personajes');
 
 export const personajeObj = {
+    id: generarId(),
     nombre: '',
     nivel: '',
     magia: '',
-    categoria: 'x'
+    categoria: ''
 };
 
 // Eventos
@@ -60,9 +61,14 @@ function btnSubmit(e) {
 
 function reiniciarObjeto() {
     Object.assign(personajeObj, {
+        id: generarId(),
         nombre: '',
         nivel: '',
         magia: '',
         categoria: ''
     })
+}
+
+function generarId() {
+    return Math.random().toString(32).substring(2) + Date.now();
 }
