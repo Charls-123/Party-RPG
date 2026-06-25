@@ -4,6 +4,7 @@ import {AdminPersonajes} from './personaje.js'
 const nombreInput = document.querySelector('#nombre');
 const nivelInput = document.querySelector('#nivel');
 const magiaInput = document.querySelector('#magia');
+const saludInput = document.querySelector('#salud');
 const categoriaInput = document.querySelector('#categoria');
 
 export const formulario = document.querySelector('#formulario-personaje');
@@ -14,6 +15,7 @@ export const personajeObj = {
     nombre: '',
     nivel: '',
     magia: '',
+    salud: '',
     categoria: ''
 };
 
@@ -21,6 +23,7 @@ export const personajeObj = {
 nombreInput.addEventListener('change', datosRegistro);
 nivelInput.addEventListener('change', datosRegistro);
 magiaInput.addEventListener('change', datosRegistro);
+saludInput.addEventListener('change', datosRegistro);
 categoriaInput.addEventListener('change', datosRegistro);
 
 formulario.addEventListener('submit', btnSubmit);
@@ -32,6 +35,8 @@ const personajes = new AdminPersonajes();
 //Functions
 function datosRegistro (e) {
     personajeObj[e.target.name] = e.target.value;
+
+    console.log(personajeObj);
 
 }
 
@@ -65,6 +70,7 @@ function reiniciarObjeto() {
         nombre: '',
         nivel: '',
         magia: '',
+        salud: '',
         categoria: ''
     })
 }

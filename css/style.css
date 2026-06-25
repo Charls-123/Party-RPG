@@ -60,6 +60,12 @@ main {
     text-transform: uppercase;
 }
 
+.contenedor-formulario {
+    width: 400px;
+    margin: 0 auto;
+
+}
+
 /* configuraciones del formulario */
 .contenedor-formulario h2 {
     font-size: 1.7rem;
@@ -111,6 +117,12 @@ input , select{
 }
 
 @media (min-width: 900px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
    .contenedor-datos {
     display: flex;
     flex-direction: row;
@@ -134,6 +146,7 @@ input , select{
 /* Configuracion imagenes */
 
 .estilo-img {
-    width: 30px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
 }
